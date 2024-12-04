@@ -18,7 +18,7 @@ function startTimer() {
     var times = 0;
     var bm= parseFloat(document.getElementById("bm").value);
     if (bm<=2&&bm>=0.5){
-        document.getElementById("omg").style.zoom="0.001%"
+        document.getElementById("omg").style.zoom="20%"
         document.getElementById("vid").style.zoom="20%"
         document.getElementById("omg").pause();
         document.getElementById("bmp").innerHTML=bm;
@@ -97,15 +97,15 @@ function startTimer() {
         
             startButton.disabled = true;
             if (times >= 23) {
-                document.getElementById("omg").style.zoom="20%"
-                document.getElementById("vid").style.zoom="0.001%"
+                document.getElementById("omg").style.opacity = 1;
+                document.getElementById("vid").style.opacity = 0;
 
                 document.getElementById("omg").play();
                 document.getElementById("omg").currentTime = 0;
 
                 document.getElementById("omg").addEventListener("ended", function() {
-                    document.getElementById("vid").style.zoom="20%"
-                    document.getElementById("omg").style.zoom="0.001%"
+                    document.getElementById("vid").style.opacity = 1;
+                    document.getElementById("omg").style.opacity = 0;
                     x=-60
                     y=0;
                     element.style.left=x+"px"
