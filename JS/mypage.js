@@ -7,6 +7,8 @@ function resetb(){
 
 function startTimer() {
 
+        document.getElementById("vid").style.opacity = 1;
+        document.getElementById("omg").style.opacity = 0;
     var element = document.getElementById("player");
     var speed;
     var yspeed=0.42;
