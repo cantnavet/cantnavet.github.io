@@ -105,7 +105,7 @@ function startTimer() {
 
                 document.getElementById("omg").addEventListener("ended", function() {
                     document.getElementById("omg").style.zoom="0.001%"
-                    document.getElementById("vid").style.zoom="100%"
+                    document.getElementById("vid").style.zoom="20%"
                     x=-60
                     y=0;
                     element.style.left=x+"px"
