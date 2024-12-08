@@ -19,7 +19,7 @@ function startTimer() {
    // var currentPosition = 0;
     var times = 0;
     var bm= parseFloat(document.getElementById("bm").value);
-    if (bm<=2&&bm>=0.5 || document.getElementById("mmlim").checked){
+    if ((bm<=2&&bm>=0.5) || document.getElementById("mmlim").checked){
         document.getElementById("omg").style.zoom="20%"
         document.getElementById("vid").style.zoom="20%"
         document.getElementById("omg").pause();
