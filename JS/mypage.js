@@ -144,7 +144,7 @@ function startTimer(){
                 return;
             }
 
-            //屏幕中间距离的递推部分
+            //表格和屏幕中间距离的递推部分
             if (times==11){
                 di+=speed;
             }
