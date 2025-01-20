@@ -119,18 +119,6 @@ function startTimer(){
                 element.style.left=x+"px"
             }
 
-            //屏幕中间距离的递推部分
-            if (times==11){
-                di+=speed;
-            }
-            if (times>=12){
-                di+=speed
-                document.getElementById("d"+(times-11)).innerHTML=di+0.6
-                document.getElementById("s"+(times-11)).innerHTML=speed
-
-                document.getElementById("d").innerHTML="← "+Math.round((di+0.6)*10000)/10000+" 格 →"
-            }
-
             //模拟结束后的处理部分
             if (times >= 23) {
 
@@ -154,6 +142,18 @@ function startTimer(){
                 startButton.disabled = false;  //再次允许使用start按钮
                 clearInterval(timer); 
                 return;
+            }
+
+            //屏幕中间距离的递推部分
+            if (times==11){
+                di+=speed;
+            }
+            if (times>=12){
+                di+=speed
+                document.getElementById("d"+(times-11)).innerHTML=di+0.6
+                document.getElementById("s"+(times-11)).innerHTML=speed
+
+                document.getElementById("d").innerHTML="← "+Math.round((di+0.6)*10000)/10000+" 格 →"
             }
 
             times++
