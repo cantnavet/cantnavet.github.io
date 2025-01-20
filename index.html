@@ -21,9 +21,12 @@
     <title>Minecraft Parkour</title>
 </head>
 <body>
+    <!--标题区-->
     <h3 style="color: rgba(18, 18, 18, 0.7);">- 在此輸入0.5 ~ 2之間的助跑 -</h2>
     <h1 style="text-shadow: 2px 2px 2px rgba(222,222,222, 0.7);position: absolute;left: 38%;font-size: 70px;top: -4%;"><b>Minecraft</b></h1>
-    <h2 style="text-shadow: 2px 2px 2px rgba(222, 222, 222, 0.7);position: absolute;left: 37%;font-size: 50px;top: 8%;"><b>Jump simulator</b></h2>
+    <h2 style="text-shadow: 2px 2px 2px rgba(222,222,222, 0.7);position: absolute;left: 37%;font-size: 50px;top: 8%;"><b>Jump simulator</b></h2>
+
+    <!--左侧动态信息+输入显示区-->
     <div>
 
         <input type="number" id="bm" value="1">
@@ -102,13 +105,15 @@
         <br>
         <span style="font-size: 10px;">(警告，仅供娱乐，限定范围外的助跑计算结果不保证准确)</span>
     </div>
-    
+
+    <!--中间动画显示区-->
     <div id="move">
         <div id="movingElement"><img src="./Material/images/cant.png" alt="" id="player"></div>
         <div id="bmp">0</div>
         <div id="ldp"></div>
         <div id="d">← 0.0000 格 →</div>
     </div>
+
     <a href="./index.html">
         <video id="omg" src="./Material/omg3.mp4"></video>
         <video id="vid" muted autoplay loop src="./Material/pre3.mp4"></video>
