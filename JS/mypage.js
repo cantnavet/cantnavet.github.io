@@ -3,7 +3,7 @@ function resetb(){
 }
 
 
-function startTimer()
+function startTimer(){
 
     //初始化网页显示
     document.getElementById("vid").style.opacity = 1;
@@ -19,6 +19,7 @@ function startTimer()
     var times = 0;
     var bm= parseFloat(document.getElementById("bm").value);
 
+
     //检测输入是否符合条件（主操作区）
     if ((bm<=2&&bm>=0.5) || document.getElementById("mmlim").checked){
         document.getElementById("omg").style.zoom="20%"
@@ -32,7 +33,7 @@ function startTimer()
 
         //预处理玩家初始速度
         bm = bm+0.6;
-        var result =((2025000*J22)+((450000*K22)*I22)+((4550000*K22)*(91/100)**(I22-2))-(5450000*K22)-(2025000*bm)-(4022109*(91/100)**(I22-2))+4022109)/((6707610*(91/100)**(I22-2))-9838260);
+        var result =((2025000*J22)+((450000*K22)*I22)+((4550000*K22)*(91/100)**(I22-2))-(5450000*K22)-(2025000*bm)-(4022109*(91/100)**(I22-2))+4022109)/((6707610*(91/100)**(I22-2))-9838260);    //来自某圈内人的 反向助跑 初速度计算公式
         var x=-60
         var y=0;
         speed = result
@@ -45,9 +46,9 @@ function startTimer()
         var E65 = 0.3274;
         var F65 = 1.274;
         var G65 = 1;
+
+        //更高精度的函数拟合
         var fd = 0.6+E65 + 0.222222222222222 * F65 * (-2 + D65) + 1.91 * (((1 - Math.pow(0.6, G65) * Math.pow(0.91, D65) ** G65) * (0.6 * Math.pow(0.91, -1 + D65) * E65 + 0.222222222222222 * (1 - Math.pow(0.91, -1 + D65)) * F65)) / (1 - 0.6 * Math.pow(0.91, D65)) + Math.pow(0.6, 1 + G65) * Math.pow(0.91, D65) ** G65 * C65) + 5.52066666666666 * (1 - Math.pow(0.91, -2 + D65)) * (1.09890109890109 * E65 - 0.407000407000406 * F65 + ((1 - Math.pow(0.6, G65) * Math.pow(0.91, D65) ** G65) * (0.6 * Math.pow(0.91, -1 + D65) * E65 + 0.222222222222222 * (1 - Math.pow(0.91, -1 + D65)) * F65)) / (1 - 0.6 * Math.pow(0.91, D65)) + Math.pow(0.6, 1 + G65) * Math.pow(0.91, D65) ** G65 * C65);
-        //element.style.top = "10px"
-        //element.style.top = (10+(parseInt(document.getElementById("player").style.top)||0)) + 'px';
         document.getElementById("ldp").style.left=((bm-0.6)*100+fd*100)+"px"
         document.getElementById("d").style.left=((fd*100)/2+(bm-0.6)*100-120)+"px"
 
@@ -60,7 +61,6 @@ function startTimer()
 
         //玩家运动递推部分
         var timer = setInterval(function() {
-
             startButton.disabled = true; //模拟途中禁用start按钮
 
             //垂直速度（Y轴）处理部分
@@ -155,12 +155,7 @@ function startTimer()
                 clearInterval(timer); 
                 return;
             }
-            
-           // element.style.top = positions[currentPosition].top + "px";
-           // element.style.left = positions[currentPosition].left + "px";
-            //currentPosition = (currentPosition + 1) % positions.length;
 
-            
             times++
         }, 50);
     }
