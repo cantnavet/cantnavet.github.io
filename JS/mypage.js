@@ -94,7 +94,7 @@ function startTimer(){
                 x+=speed*100   
                 element.style.left=x+"px"
 
-            //第1次起跳下一刻的滑度特判
+            //第1次起跳下一刻的滑度特判 (p.s. mc中方块滑度的影响会持续1tick，因此下一刻必须特判)
             }else if(times==1){
                 speed=speed*0.6*0.91+0.02*1.3*0.98
                 x+=speed*100  
